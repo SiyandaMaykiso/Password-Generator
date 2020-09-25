@@ -16,9 +16,8 @@ myInput.onblur = function() {
   document.getElementById("message").style.display = "none";
 
 // When the user starts to type something inside the password field
-myInput.onkeyup = function() 
+myInput.onkeyup = function()
 
-{}
 
   // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
@@ -64,6 +63,8 @@ function writePassword() {
   passwordText.value = password;
 
 {
+
+  
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 }

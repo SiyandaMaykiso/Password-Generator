@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color:linen;
 }
 
@@ -62,7 +62,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background:aliceblue;
   height: 2px;
 }
 
@@ -74,11 +74,11 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color:maroon (360, 91%, 36%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color:beige (0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -90,7 +90,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background:azure;
 }
 
 .float-right {
