@@ -8,3 +8,4 @@ This app will run sucessfully on different browsers and store secure information
 
 It contains a clear and polished user interface that is responsive.
 
+https://siyandamaykiso.github.io/Password-Generator/
