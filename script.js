@@ -38,4 +38,4 @@ myInput.onblur = function() {
 myInput.onkeyup = function()
 
 
-}
+};
