@@ -29,7 +29,9 @@ function writePassword() {
 }
 
 // User listener for response
-generateBtn.addEventListener("click", writePassword);
+
+document.getElementById("myBtn").addEventListener("click", function() {
+});
 
 // Begin process
 function generatePassword() {
