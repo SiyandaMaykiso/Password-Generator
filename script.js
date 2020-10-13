@@ -1,4 +1,4 @@
-// Assignment Code
+// Command Functions
 var generateBtn = document.querySelector("#generate");
 
 var passwordLength;
@@ -9,17 +9,17 @@ var confirmSpecial;
 var userChoices;
 
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// Var To Upper Case ------------
+// Control functions
 var blankUpper = [];
 var toUpper = function (x) {
   return x.toUpperCase();
 };
 upperCase = lowerCase.map(toUpper);
-//--------------------------------------
+// Command Numerals 
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
-// Write password to the #password input
+// Input for user to add password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -28,12 +28,12 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// User listener for response
 generateBtn.addEventListener("click", writePassword);
 
-// Start Function
+// Begin process
 function generatePassword() {
-  // Ask four user Input
+  // Respond to the user
   passwordLength = prompt("How many characters would you like your password? Choose between 8 and 128");
   console.log("Password length " + passwordLength);
   
@@ -56,15 +56,15 @@ function generatePassword() {
 
   };
 
-  // No answer then
+  // If Incorrect
   if (!confirmLower && !confirmUpper && !confirmNumber && !confirmSpecial) {
     userChoices = alert("You must choose a criteria");
-  // 4 true options
+  // If Correct
   } else if (confirmLower && confirmUpper && confirmNumber && confirmSpecial) {
     userChoices = lowerCase.concat(upperCase, numbers, special);
     console.log(userChoices);
   }
-  // 3 true options
+  // Correct Options
   else if (confirmLower && confirmUpper && confirmNumber) {
     userChoices = lowerCase.concat(upperCase, numbers);
     console.log(userChoices);
@@ -81,7 +81,7 @@ function generatePassword() {
     userChoices = upperCase.concat(numbers, special);
     console.log(userChoices);
   }
-  // 2 true options
+  // Further Combinations
   else if (confirmLower && confirmUpper) {
     userChoices = lowerCase.concat(upperCase);
     console.log(userChoices);
@@ -106,7 +106,7 @@ function generatePassword() {
     userChoices = numbers.concat(special);
     console.log(userChoices);
   }
-  // 1 true option
+  // If Correct
   else if (confirmLower) {
     userChoices = lowerCase;
     console.log(userChoices);
@@ -124,17 +124,17 @@ function generatePassword() {
     console.log(userChoices);
   };
 
-  // Empty variable for the password lenght
+  // If passoword is too long
   var passwordBlank = [];
   
-  // Loop for random selection
+  // Rebuild
   for (var i = 0; i < passwordLength; i++) {
     var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
     passwordBlank.push(allChoices);
     console.log(allChoices);
   }
 
-  // Join and return the password 
+  // Add and enter password
   var password = passwordBlank.join("");
   console.log("Your Pasword is: " + password);
   return password;
