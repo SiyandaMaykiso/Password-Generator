@@ -15,7 +15,7 @@ function copyPassword(){
     let copyText = document.getElementById("password");
     copyText.select();
     document.execCommand("copy");
-    alert("Password copied to your clipboard."); 
+    alert("Password copied to your desktop."); 
 }; 
 
 function genPassword() {
