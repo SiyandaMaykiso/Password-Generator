@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Next-Gen Password Generator</title>
-
-    <div id="Next-Gen Password Generator" ></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
     
-    <script src="script.js"></script>
+    <link 
+    rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link 
+    href="https://fonts.googleapis.com/css?family=Marvel|Source+Sans+Pro:600&display=swap" 
+    rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <link 
+    href="style.css" type="text/css" 
+    rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container.fluid text-center bg-light p-3">
+        <h1 class="mb-5"> Next-Gen Password Generator</h1>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-
-
-    <div class="wrapper">
-      <header>
-        <h1>Next-Gen Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Create your Password</h2>
+        <div class="password container bg-white p-3 border rounded">
+            <h2 class="text-left">Create your Password</h2>
+            <hr>
+            <textarea
+                readonly
+                id="password"
+                placeholder="Your Secure Password"
+                aria-label="Generated Password"
+                class="w-75 generator rounded pb-5 pt-2 text-center"
+            ></textarea>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 mb-2">
+                    <button type="button" id="gen" class="btn btn-danger btn-lg">Apply Password</button>
+                </div>
+                <div class="col-sm-6 mb-2"> 
+                    <button onclick="copyPassword()" type="button" id="copy" class="btn btn-secondary btn-lg" >Copy to Desktop</button>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-
-          <button id="myBtn">Generate Password</button>
-
-          <button id="myBtn">Save Password</button>
-
-          <script>
-            document.getElementById("myBtn").addEventListener('click', function() {
-            });
-            </script>
-            
-            
-
-        </div>
-      </div>
     </div>
 
-    <br>
-
-  </body>
+    <script type="text/javascript" src="script.js"></script>
+</body>
 </html>
-
-}); 
