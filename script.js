@@ -23,7 +23,7 @@ function genPassword() {
     let passwordOptions ='';
     let passwordCheck= []; 
     
-//user prompt to determine password lenght
+//user selection on length
     alert("Welcome to the Next-Gen Password Generator!")
     let numberChar = prompt("How many characters would you like in your password? It must be between 8 and 128.");
     
@@ -37,7 +37,7 @@ function genPassword() {
     }
 
 
-//user prompt to select type
+// user selection
 
     let useSpecial = false; 
     let useNumerical = false; 
@@ -68,35 +68,35 @@ function genPassword() {
     addCharSelect(useLower, alphaLower);
     addCharSelect(useUpper, alphaUpper); 
 
-    // if (useSpecial) {
-    //     passwordOptions = passwordOptions + special;
-    //     passwordCheck.push(special); 
-    //     }; 
-    // if (useNumerical) {
-    //     passwordOptions = passwordOptions + numerical;
-    //     passwordCheck.push(numerical); 
-    //     }; 
-    // if (useLower) {
-    //     passwordOptions = passwordOptions + alphaLower;
-    //     passwordCheck.push(alphaLower); 
-    //     }; 
-    // if (useUpper) {
-    //     passwordOptions = passwordOptions + alphaUpper;
-    //     passwordCheck.push(alphaUpper); 
-    //     }; 
+     if (useSpecial) {
+     passwordOptions = passwordOptions + special;
+    passwordCheck.push(special); 
+    }; 
+    if (useNumerical) {
+    passwordOptions = passwordOptions + numerical;
+    passwordCheck.push(numerical); 
+    }; 
+    if (useLower) {
+    passwordOptions = passwordOptions + alphaLower;
+    passwordCheck.push(alphaLower); 
+    }; 
+    if (useUpper) {
+    passwordOptions = passwordOptions + alphaUpper;
+    passwordCheck.push(alphaUpper); 
+    }; 
 
 
 
-//function to generate random interger in range 0 to last index of a list lenght:
+// Creates random numbers
 
 
     function randomNum() {
         return Math.floor(Math.random()*(passwordOptions.length)); 
     }
 
-    // let stringLength= passwordOptions.length;
+    // Creates string
 
-//generate password of given lenght form list of possible characters
+//Generates password based on characters 
     function generateNewPassword(){ 
         passwordGenerated = '';
         for (i=0; i < numberChar; i++) {
